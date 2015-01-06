@@ -6,10 +6,10 @@ int main(void){
   
   while(1){
     state ^= 0xFF; 
-    twi_start();
-    twi_write(0x40);
-    twi_write(state);
-    twi_stop();
+    i2c_start();
+    i2c_write(0x40);
+    i2c_write(state);
+    i2c_stop();
     _delay_ms(500);
   }
 }
