@@ -1,2 +1,3 @@
 .*~$
-^I2C_test.(bin|hex)$
+.*\.o$
+.*\.(bin|hex)$
