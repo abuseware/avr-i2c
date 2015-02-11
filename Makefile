@@ -1,4 +1,4 @@
-CFLAGS=-Os -std=c99 -pedantic -mmcu=atmega8a -DF_CPU=8000000UL
+CFLAGS=-Os -std=c99 -pedantic -Wall -Wextra -mmcu=atmega8a -DF_CPU=8000000UL
 
 all: lib test
 
