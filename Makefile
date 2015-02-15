@@ -11,4 +11,4 @@ test: lib
 	avr-objcopy -O ihex I2C_test.bin I2C_test.hex
 
 flash: test
-	avrdude -c usbasp -p m8 -U flash:w:I2C_test.hex
+	avrdude -q -c usbasp -p m8 -U flash:w:I2C_test.hex
