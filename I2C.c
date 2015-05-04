@@ -1,5 +1,9 @@
 #include <avr/io.h>
 
+void i2c_speed(uint8_t speed){
+  TWBR = ((F_CPU / ( speed * 100000)) - 16)/2;
+}
+
 void i2c_start(void){
   TWCR = _BV(TWINT) | _BV(TWSTA) | _BV(TWEN);
   loop_until_bit_is_set(TWCR, TWINT);
