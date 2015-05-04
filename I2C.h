@@ -1,4 +1,5 @@
 #pragma once
+#include <avr/io.h>
 
 #define I2C_FAST 4
 #define I2C_SLOW 1
