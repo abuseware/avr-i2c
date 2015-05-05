@@ -1,7 +1,7 @@
 #include <I2C.h>
 
-void i2c_speed(uint8_t speed){
-  TWBR = ((F_CPU / ( speed * 100000)) - 16)/2;
+void i2c_speed(i2c_speed_t speed){
+  TWBR = ((F_CPU / ( speed * 1000)) - 16)/2;
 }
 
 void i2c_start(void){
@@ -20,7 +20,7 @@ void i2c_write(uint8_t data){
   loop_until_bit_is_set(TWCR, TWINT);
 }
 
-uint8_t i2c_read(uint8_t ack){
+uint8_t i2c_read(i2c_ack_t ack){
   TWCR = ack ? (_BV(TWINT) | _BV(TWEN) | _BV(TWEA)) : (_BV(TWINT) | _BV(TWEN));
   loop_until_bit_is_set(TWCR, TWINT);
   return TWDR;
