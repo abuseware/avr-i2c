@@ -1,4 +1,4 @@
-#include <I2C.h>
+#include "I2C.h"
 
 void i2c_speed(i2c_speed_t speed){
   TWBR = ((F_CPU / ( speed * 1000)) - 16)/2;
