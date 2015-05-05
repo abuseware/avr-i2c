@@ -5,7 +5,7 @@ typedef enum {
   SLOW =        100,
   FAST =        400,
   FAST_PLUS =   1000,
-  HIHG_SPEED =  3400
+  HIGH =        3400
 } i2c_speed_t;
 
 typedef enum {
